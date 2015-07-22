@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Leaflet zoom sync only</title>
-    <!-- Load Leaflet from CDN -->
+    <!-- Load Leaflet from CDN 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    -->
+      <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+    <script src="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
     <!-- Load jQuery to do JSON calls when needed -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 
@@ -23,7 +26,7 @@
 
     <script type="text/javascript">
 
-        var startZoom = 11;
+        var startZoom = 10.5;
         var endZoom;
         
         // my tests show that same layer cannot be used in two maps, so need to duplicate it
@@ -48,8 +51,6 @@
 		boxZoom: false
         });
         new L.Control.Zoom({ position: 'topright'}).addTo(map1); // produces 1 zoom level for both maps
-       
-        // map1.attributionControl.setPrefix('');
         
         var map2 = L.map('map2', {
             layers: [map2base],	
@@ -63,7 +64,7 @@
 	          boxZoom: false
         });
         
- 	$.getJSON("UnifiedSchoolDistricts2013TIGER.geojson",function(districts){        
+ 	$.getJSON("hartford-border.geojson",function(districts){        
     		L.geoJson(districts, {
       			style: function(feature){
         			return { color: "red", 
@@ -72,11 +73,26 @@
       			}
     		}).addTo(map1);
   	});
+  	
+ 	$.getJSON("chicago-border.geojson",function(districts){        
+    		L.geoJson(districts, {
+      			style: function(feature){
+        			return { color: "red", 
+        			fillOpacity: 0
+        			};
+      			}
+    		}).addTo(map2);
+  	});
+  	
+	// customize source link to your GitHub repo on map1, blank prefix on map 2
+        map1.attributionControl.setPrefix('View <a href="//github.com/jackdougherty/otl-compare-school-districts">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+  	map2.attributionControl.setPrefix(''); //blank
+  	L.control.scale().addTo(map1);
+  	L.control.scale().addTo(map2);
         
-        // this is the first workable JS function that I've ever written from scratch, and it seems to work
+        // looking for ways to optimize this simple function
         map1.on('zoomend', function(e) { 
         	zoomEnd = map1.getZoom(),
-        	console.log("zoomEnd", zoomEnd), // remove this later
         	map2.setZoom(zoomEnd);
         });
      
