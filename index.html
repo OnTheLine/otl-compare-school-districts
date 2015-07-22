@@ -63,14 +63,14 @@
 	          boxZoom: false
         });
         
- 	$.getJSON("UnifiedSchoolDistricts2013TIGER.geojson",function(districts){        
+ 	$.getJSON("hartford-border.geojson",function(districts){        
     		L.geoJson(districts, {
       			style: function(feature){
         			return { color: "red", 
         			fillOpacity: 0
         			};
       			}
-    		}).addTo(map);
+    		}).addTo(map1);
   	});
         
         // this is the first workable JS function that I've ever written from scratch, and it seems to work
