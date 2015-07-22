@@ -85,11 +85,13 @@
       			}
     		}).addTo(map2);
   	});
+  	
+  	L.control.scale().addTo(map1);
+  	L.control.scale().addTo(map2);
         
-        // this is the first workable JS function that I've ever written from scratch, and it seems to work
+        // looking for ways to optimize this simple function
         map1.on('zoomend', function(e) { 
         	zoomEnd = map1.getZoom(),
-        	console.log("zoomEnd", zoomEnd), // remove this later
         	map2.setZoom(zoomEnd);
         });
      
