@@ -72,6 +72,16 @@
       			}
     		}).addTo(map1);
   	});
+  	
+ 	$.getJSON("chicago-border.geojson",function(districts){        
+    		L.geoJson(districts, {
+      			style: function(feature){
+        			return { color: "red", 
+        			fillOpacity: 0
+        			};
+      			}
+    		}).addTo(map2);
+  	});
         
         // this is the first workable JS function that I've ever written from scratch, and it seems to work
         map1.on('zoomend', function(e) { 
