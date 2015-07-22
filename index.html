@@ -51,8 +51,6 @@
 		boxZoom: false
         });
         new L.Control.Zoom({ position: 'topright'}).addTo(map1); // produces 1 zoom level for both maps
-       
-        // map1.attributionControl.setPrefix('');
         
         var map2 = L.map('map2', {
             layers: [map2base],	
@@ -86,6 +84,9 @@
     		}).addTo(map2);
   	});
   	
+	map1.attributionControl.setPrefix(''); //blank
+	// customize source link to your GitHub repo
+        map2.attributionControl.setPrefix('View <a href="//github.com/jackdougherty/otl-compare-school-districts">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
   	L.control.scale().addTo(map1);
   	L.control.scale().addTo(map2);
         
