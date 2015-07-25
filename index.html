@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>Leaflet zoom sync only</title>
-    <!-- Load Leaflet from CDN 
+    <!-- Load Leaflet from CDN
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     -->
-      <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
-    <script src="//cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-1.0.0-b1/leaflet.js"></script>
     <!-- Load jQuery to do JSON calls when needed -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 
     <style type="text/css">
         html, body { width: 100%; height: 100%; margin: 0; }
@@ -28,7 +28,7 @@
 
         var startZoom = 10.5;
         var endZoom;
-        
+
         // my tests show that same layer cannot be used in two maps, so need to duplicate it
         var map1base = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   		    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
@@ -36,12 +36,12 @@
 	var map2base = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   		    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 	      });
-	      
-	      
-	      
+
+
+
         var map1 = L.map('map1', {
             layers: [map1base],
-	         // center: startCenter, 
+	         // center: startCenter,
 	         center: [41.76, -72.67], // Hartford
             	zoom: startZoom,
             	zoomControl: false, // add it below
@@ -51,51 +51,51 @@
 		boxZoom: false
         });
         new L.Control.Zoom({ position: 'topright'}).addTo(map1); // produces 1 zoom level for both maps
-        
+
         var map2 = L.map('map2', {
-            layers: [map2base],	
+            layers: [map2base],
 	          // center: startCenter, //
 	          center: [41.83, -87.68], // Chicago
-	          zoom: startZoom,	
+	          zoom: startZoom,
 	          zoomControl: false,   // none for this side
 	          touchZoom: false, // requires manual zoom control for all below
 	          scrollWheelZoom: false,
 	          doubleClickZoom: false,
 	          boxZoom: false
         });
-        
- 	$.getJSON("hartford-border.geojson",function(districts){        
+
+ 	$.getJSON("hartford-border.geojson",function(districts){
     		L.geoJson(districts, {
       			style: function(feature){
-        			return { color: "red", 
+        			return { color: "red",
         			fillOpacity: 0
         			};
       			}
     		}).addTo(map1);
   	});
-  	
- 	$.getJSON("chicago-border.geojson",function(districts){        
+
+ 	$.getJSON("chicago-border.geojson",function(districts){
     		L.geoJson(districts, {
       			style: function(feature){
-        			return { color: "red", 
+        			return { color: "red",
         			fillOpacity: 0
         			};
       			}
     		}).addTo(map2);
   	});
-  	
+
 	// customize source link to your GitHub repo on map1, blank prefix on map 2
-        map1.attributionControl.setPrefix('View <a href="//github.com/jackdougherty/otl-compare-school-districts">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+        map1.attributionControl.setPrefix('View <a href="http://github.com/jackdougherty/otl-compare-school-districts">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
   	map2.attributionControl.setPrefix(''); //blank
   	L.control.scale().addTo(map1);
   	L.control.scale().addTo(map2);
-        
+
         // looking for ways to optimize this simple function
-        map1.on('zoomend', function(e) { 
+        map1.on('zoomend', function(e) {
         	zoomEnd = map1.getZoom(),
         	map2.setZoom(zoomEnd);
         });
-     
+
     </script>
 </body>
 </html>
