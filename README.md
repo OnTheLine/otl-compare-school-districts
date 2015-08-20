@@ -6,17 +6,22 @@ http://jackdougherty.github.io/otl-compare-school-districts/
 
 ## Background
 - Expands on EdBuild US school district map (http://maps.edbuild.org/DividingLines.html)
-- Improves 2012 Google Maps v3 School District Comparison Viewer created with UConn MAGIC (http://magic.lib.uconn.edu/otl/dualzoom_schooldistricts.html), with code viewable on GitHub (https://github.com/JackDougherty/otl-magic/blob/master/dualzoom-schooldistricts.html)
+- Replaces 2012 Google Maps v3 School District Comparison Viewer created with UConn MAGIC (http://magic.lib.uconn.edu/otl/dualzoom_schooldistricts.html), with 2012 code viewable on GitHub (https://github.com/JackDougherty/otl-magic/blob/master/dualzoom-schooldistricts.html)
 
 ## To Do
-- Improve my simple zoom sync function in Leaflet, which is not as fast as the Google Maps version, and does not yet accept other types of zoom commands (such as two-finger gestures on trackpads)
+- Ask EdBuild to approve, and ask if they wish to build their own wrapper with title and caption; mine will be embedded inside http://OnTheLine.trincoll.edu book
+- Looking to optimize these sync functions, if possible, since not instantaneous
 ```
-map1.on('zoomend', function(e) {
-        	zoomEnd = map1.getZoom(),
-        	map2.setZoom(zoomEnd);
-});
-```
+    map1.on('zoomend', function(e) {
+      zoomValue = map1.getZoom(),
+      map2.setZoom(zoomValue);
+    });
 
-- display initial value in geocoder ('Hartford, CT')
-- create geocoder for 2nd map
-- fix muniGrid hover data in 2nd map
+    map2.on('zoomend', function(e) {
+      zoomValue = map2.getZoom(),
+      map1.setZoom(zoomValue);
+    });
+```
+- See index-unsuccessful-test.html for alternative sync logic from MapBox example that did not work. Maybe I did not modify it correctly?
+- It would be ideal to insert an initial value inside the geocoder box ("Hartford CT"), but I can't find a way to do this in Mapbox.
+- Emailed Mapbox to ask if possible to limit geocoder results to United States
