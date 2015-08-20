@@ -1,8 +1,11 @@
 # otl-compare-school-districts
-Compare school district boundaries and data in side-by-side Leaflet map with zoom sync, using EdBuild US school district layer in Mapbox
+Compare school district boundaries and data in side-by-side Leaflet map with zoom sync, using EdBuild US school district layer in Mapbox.
 
 ## Demo
 http://jackdougherty.github.io/otl-compare-school-districts/
+
+## Purpose
+- Purpose of the tool is to show different school district boundaries at the same map scale. The startup compares Hartford CT (a narrowly-defined central city school district) versus Charlotte-Mecklenberg, NC (a county-wide school district). These differences are typical of the Northeast versus Southern and Western regions. See more in http://OnTheLine.trincoll.edu book.
 
 ## Background
 - Expands on EdBuild US school district map (http://maps.edbuild.org/DividingLines.html)
