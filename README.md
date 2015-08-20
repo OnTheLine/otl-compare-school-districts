@@ -17,5 +17,6 @@ map1.on('zoomend', function(e) {
 });
 ```
 
-- add geocoder (type in any city + state for related school district)
-- add hover data for school districts in each map
+- display initial value in geocoder ('Hartford, CT')
+- create geocoder for 2nd map
+- fix muniGrid hover data in 2nd map
