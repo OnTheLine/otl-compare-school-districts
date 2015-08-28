@@ -3,3 +3,85 @@ html, body { width: 100%; height: 100%; margin: 0; }
 #map1 { float: left; }
 #map2 { float: right; }
 .leaflet-control-mapbox-geocoder-form input {font-size: larger;}
+
+/* Styling for LEGEND from EdBuild.org*/
+/********************************************/
+/********************************************/
+
+#legendcontainer{
+      display: block;
+      border: 1px solid #3887BE;
+      height: auto;
+      padding-left: 10px;
+      padding-right: 0px;
+      font: normal 13px/18px 'Lato', sans-serif;
+      width: 140px;
+      position: absolute;
+      right: 1%;
+      bottom: 4%;
+      background: white;
+}
+
+div#legendcontainer hr {
+  margin-left: -11px;
+  margin-top: -10px;
+}
+
+p#instructions {
+  margin-top: 0px;
+  font-size: 11px;
+  margin-left: -35px;
+}
+
+#legend-ui {
+    list-style: none;
+}
+
+ul#legend-ui li {
+    list-style: none;
+}
+
+#legend-ui li ul.legend {
+    background: #FFF;
+    display: inline-block;
+    padding-left: 0px;
+    margin-left: -35px;
+    margin-top: -2px;
+}
+
+#legend-ui li {
+    list-style-type: none;
+    font:13px/18px 'Montserrat', sans-serif;;
+}
+
+#legend-ui li ul.legend span.keycolor {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+
+/*Legend Colors*/
+/********************************************/
+
+#legend-ui li ul.legend li.legendTitle span.keycolor {
+    width: 0px;
+    margin-left: -15px;
+}
+
+#legend-ui li ul.legend li.zerotoTen span.keycolor {
+    background-color:#eff3ff;
+}
+#legend-ui li ul.legend li.tentoTwenty span.keycolor {
+    background-color:#bdd7e7;
+}
+#legend-ui li ul.legend li.twentytoThirty span.keycolor {
+    background-color:#6baed6;
+}
+#legend-ui li ul.legend li.thirtytoFourty span.keycolor {
+    background-color:#3182bd;
+}
+#legend-ui li ul.legend li.fourtyPlus span.keycolor {
+    background-color:#08519c;
+}

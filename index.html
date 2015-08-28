@@ -10,6 +10,20 @@
     <!-- div to display dual maps; add more for title and caption if desired -->
     <div id="map1"></div>
     <div id="map2"></div>
+    <div id="legendcontainer">
+      <ul id="legend-ui">
+          <li>
+            <ul class="legend">
+              <li class="legendTitle"><span class="keycolor"></span><span>Student Poverty</span></li>
+        <li class="zerotoTen"><span class="keycolor"></span><span>0% to 10%</span></li>
+        <li class="tentoTwenty"><span class="keycolor"></span><span>10% to 20%</span></li>
+        <li class="twentytoThirty"><span class="keycolor"></span><span>20% to 30%</span></li>
+        <li class="thirtytoFourty"><span class="keycolor"></span><span>30% to 40%</span></li>
+        <li class="fourtyPlus"><span class="keycolor"></span><span>&gt; 40%</span></li>
+      </ul>
+      <p id="instructions">Data: <a href="http://www.census.gov/did/www/saipe/">US Census 2013</a><br>
+        Learn more: <a href="http://edbuild.org/blog/2015/what-about-my-district">EdBuild.org</a></p>
+    </div>
     <script src="https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script>
