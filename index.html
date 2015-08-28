@@ -11,6 +11,7 @@
         #map1, #map2 { width: 49.5%; height: 100%; }
         #map1 { float: left; }
         #map2 { float: right; }
+        .leaflet-control-mapbox-geocoder-form input {font-size: larger;}
     </style>
 </head>
 
@@ -44,8 +45,13 @@
       boxZoom: true
     })
     .addControl(L.mapbox.geocoderControl('mapbox.places', {
-          keepOpen: true
+          autocomplete: true,
+          keepOpen: true,
+          placeholder: " "
     }));
+
+    var inputForm1 = document.querySelector('.leaflet-control-mapbox-geocoder input');
+    inputForm1.placeholder='Hartford, CT';
 
     new L.Control.Zoom({ position: 'topleft'}).addTo(map1);
 
@@ -61,8 +67,13 @@
         boxZoom: true
     })
     .addControl(L.mapbox.geocoderControl('mapbox.places', {
-          keepOpen: true
+          autocomplete: true,
+          keepOpen: true,
+          placeholder: " "
     }));
+
+    // var inputForm2 = document.querySelector('.leaflet-control-mapbox-geocoder input');
+    // inputForm2.placeholder='Charlotte, NC';
 
     new L.Control.Zoom({ position: 'topleft'}).addTo(map2);
 
