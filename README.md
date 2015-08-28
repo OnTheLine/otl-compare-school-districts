@@ -26,5 +26,9 @@ http://jackdougherty.github.io/otl-compare-school-districts/
     });
 ```
 - See index-unsuccessful-test.html for alternative sync logic from MapBox example that did not work. Maybe I did not modify it correctly?
-- It would be ideal to insert an initial value inside the geocoder box ("Hartford CT"), but I can't find a way to do this in Mapbox.
-- Emailed Mapbox to ask if possible to limit geocoder results to United States
+- Still looking for way to add 2nd pre-defined geocoder input value ("Charlotte NC") without overriding the 1st input value ("Hartford CT")
+- Option to focus (but not limit) Mapbox geocoder results to US with proximity feature
+
+## Credits
+- Thanks to Sara Hodges and others at http://EdBuild.org for creating the US school districts map and data layers, making them publicly available on MapBox, and encouraging collaboration
+- Thanks Dan Swick at MapBox for suggesting an easy way to code geocoder input values
