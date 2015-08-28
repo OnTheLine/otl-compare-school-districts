@@ -23,8 +23,7 @@ You are free to share and redistribute this map, and modify its open-source code
 - Replaces 2012 Google Maps v3 School District Comparison Viewer created with UConn MAGIC (http://magic.lib.uconn.edu/otl/dualzoom_schooldistricts.html)
 
 ## To Do
-- Create static legend with source link for poverty data
-- Option to focus (but not limit) Mapbox geocoder results to US with proximity feature
+- Check if GA is functioning correctly; not sure if loading correctly from index.html; ask Michael about MAGIC hosting and GA options; see also http://stackoverflow.com/questions/753514/how-do-i-dynamically-load-google-analytics-javascript
 
 ## Credits
 - Thanks to Sara Hodges and others at http://EdBuild.org for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
