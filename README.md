@@ -23,7 +23,11 @@ You are free to share and redistribute this map, and modify its open-source code
 - Replaces 2012 Google Maps v3 School District Comparison Viewer created with UConn MAGIC (http://magic.lib.uconn.edu/otl/dualzoom_schooldistricts.html)
 
 ## To Do
-- Check if GA is functioning correctly; not sure if loading correctly from index.html; ask Michael about MAGIC hosting and GA options; see also http://stackoverflow.com/questions/753514/how-do-i-dynamically-load-google-analytics-javascript
+- Add basemap layer that displays more place names; see MapBox options that appear in http://geojson.io/#map=10/42.9549/-75.6161
+- Ask MAGIC for code advice that will enable tool to accept a URL string that includes specific latlng coords and zoom levels for map1 and map2, similar to: http://magic.lib.uconn.edu/otl/dualcontrol_aerialchange.html
+- If above is not feasible, then code a second HTML/JS version to display Hartford vs Morrisville NY (with default Hartford-Charlotte)
+- Ask MAGIC for advice to ensure that Google Analytics settings and code are correct, as GA is displaying some results, but not real-time. Currently, GA universal JS code appears at bottom of index.html.
+Possible resources:  - http://stackoverflow.com/questions/753514/how-do-i-dynamically-load-google-analytics-javascript
 
 ## Credits
 - Thanks to Sara Hodges and others at http://EdBuild.org for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
