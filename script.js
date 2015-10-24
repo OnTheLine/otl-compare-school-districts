@@ -72,7 +72,7 @@ L.mapbox.tileLayer('edbuild.f4de156e').addTo(map1);
 L.mapbox.tileLayer('edbuild.f4de156e').addTo(map2);
 
 // customize source link to your GitHub repo on map1, blank prefix on map 2
-map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare school-districts">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare-school-districts">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 map2.attributionControl.setPrefix(''); //intentionally blank to avoid redundancy
 
 // add scales to both maps
