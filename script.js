@@ -2,9 +2,7 @@
 L.mapbox.accessToken = 'pk.eyJ1IjoiamFja2RvdWdoZXJ0eSIsImEiOiJxMi11TGlzIn0.ydUTGpMKcADi7fKPxy0GVA';
 
 //two instances of EdBuild US school district chloropleth map layer
-var distMap1 = L.mapbox.tileLayer('edbuild.95702fa3',{
-  attribution: '&copy; <a href="http://www.edbuild.org">EdBuild, 2015; US Census, 2013.</a>'
-});
+var distMap1 = L.mapbox.tileLayer('edbuild.95702fa3');
 var distMap2 = L.mapbox.tileLayer('edbuild.95702fa3',{
   attribution: '&copy; <a href="http://www.edbuild.org">EdBuild, 2015; US Census, 2013.</a>'
 });
@@ -17,10 +15,7 @@ var map1 = L.map('map1', {
   zoom: startZoom,
   minZoom: 6,
   zoomControl: false, // add later to position below geocoder
-  touchZoom: true, // option to turn off all of these UI settings
-  scrollWheelZoom: true,
-  doubleClickZoom: true,
-  boxZoom: true
+  scrollWheelZoom: false
 })
 .addControl(L.mapbox.geocoderControl('mapbox.places', {
       autocomplete: true,
@@ -39,10 +34,7 @@ var map2 = L.map('map2', {
     zoom: startZoom,
     minZoom: 6,
     zoomControl: false,  // add later to map in top-right
-    touchZoom: true, // option to turn off all of these UI settings
-    scrollWheelZoom: true,
-    doubleClickZoom: true,
-    boxZoom: true
+    scrollWheelZoom: false
 })
 .addControl(L.mapbox.geocoderControl('mapbox.places', {
       autocomplete: true,
@@ -72,7 +64,7 @@ L.mapbox.tileLayer('edbuild.f4de156e').addTo(map1);
 L.mapbox.tileLayer('edbuild.f4de156e').addTo(map2);
 
 // customize source link to your GitHub repo on map1, blank prefix on map 2
-map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare-school-districts">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare-school-districts" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 map2.attributionControl.setPrefix(''); //intentionally blank to avoid redundancy
 
 // add scales to both maps
