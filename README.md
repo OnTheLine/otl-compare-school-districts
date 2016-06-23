@@ -5,7 +5,7 @@ Compare any US school district boundaries and data, side-by-side in the same sca
 
 http://jackdougherty.github.io/otl-compare-school-districts/index-frame.html
 
-## embed shortcode
+## Embed shortcode in http://OnTheLine.trincoll.edu
 [iframe src='http://jackdougherty.github.io/otl-compare-school-districts' width="100%" height=500]
 
 ## Background
@@ -20,7 +20,6 @@ http://jackdougherty.github.io/otl-compare-school-districts/index-frame.html
 - Thanks to Dan Swick at MapBox for great advice on the geocoder input values.
 
 ## To Do
+- Add Ilya's permalink code from otl-neighborhood-change
 - Add basemap layer that displays more place names; see MapBox options that appear in http://geojson.io/#map=10/42.9549/-75.6161
 - Ask MAGIC to support Google Analytics and remove my GA code from index.html
-- Ask MAGIC for code advice that will enable tool to accept a URL string that includes specific latlng coords and zoom levels for map1 and map2, similar to: http://magic.lib.uconn.edu/otl/dualcontrol_aerialchange.html
-- If above is not feasible, then code a second HTML/JS version to display Hartford vs Morrisville NY (with default Hartford-Charlotte)
