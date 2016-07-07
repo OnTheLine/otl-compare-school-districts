@@ -1,10 +1,10 @@
 // please insert your own MapBox token in place of Jack's version
 L.mapbox.accessToken = 'pk.eyJ1IjoiamFja2RvdWdoZXJ0eSIsImEiOiJxMi11TGlzIn0.ydUTGpMKcADi7fKPxy0GVA';
 
-//two instances of EdBuild US school district chloropleth map layer
-var distMap1 = L.mapbox.tileLayer('edbuild.95702fa3');
-var distMap2 = L.mapbox.tileLayer('edbuild.95702fa3',{
-  attribution: '&copy; <a href="http://www.edbuild.org">EdBuild, 2015; US Census, 2013.</a>'
+//two instances of EdBuild US school district chloropleth map layer; see Alaska, Hawaii, Puerto Rico at view-source:http://viz.edbuild.org/maps/2016/dividing-lines-2014/
+var distMap1 = L.mapbox.tileLayer('edbuild.SD_2014_Poverty');
+var distMap2 = L.mapbox.tileLayer('edbuild.SD_2014_Poverty',{
+  attribution: '&copy; <a href="http://www.edbuild.org">EdBuild, 2016; US Census, 2014.</a>'
 });
 
 var startZoom = 10; // initial zoom level for both maps
@@ -48,14 +48,14 @@ inputForm2.placeholder='Charlotte, NC';
 new L.Control.Zoom({ position: 'topleft'}).addTo(map2);
 
 //two instances of EdBuild State Borders Base Layer
-L.mapbox.tileLayer('edbuild.5e7c9cb7').addTo(map1);
-L.mapbox.tileLayer('edbuild.5e7c9cb7').addTo(map2);
+L.mapbox.tileLayer('edbuild.n8o0bffb').addTo(map1);
+L.mapbox.tileLayer('edbuild.n8o0bffb').addTo(map2);
 
 //two instances of EdBuild Tooltip Base Layers - Invisible
-L.mapbox.tileLayer('edbuild.b6476278').addTo(map1);
-L.mapbox.tileLayer('edbuild.b6476278').addTo(map2);
-var muniGrid1 = L.mapbox.gridLayer('edbuild.b6476278').addTo(map1);
-var muniGrid2 = L.mapbox.gridLayer('edbuild.b6476278').addTo(map2);
+L.mapbox.tileLayer('edbuild.SD_2014_Tooltip').addTo(map1);
+L.mapbox.tileLayer('edbuild.SD_2014_Tooltip').addTo(map2);
+var muniGrid1 = L.mapbox.gridLayer('edbuild.SD_2014_Tooltip').addTo(map1);
+var muniGrid2 = L.mapbox.gridLayer('edbuild.SD_2014_Tooltip').addTo(map2);
 var muniControlA = L.mapbox.gridControl(muniGrid1, {follow: false}).addTo(map1);
 var muniControlB = L.mapbox.gridControl(muniGrid2, {follow: false}).addTo(map2);
 
@@ -64,7 +64,7 @@ L.mapbox.tileLayer('edbuild.f4de156e').addTo(map1);
 L.mapbox.tileLayer('edbuild.f4de156e').addTo(map2);
 
 // customize source link to your GitHub repo on map1, blank prefix on map 2
-map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare-school-districts" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+map1.attributionControl.setPrefix('View  <a href="http://github.com/jackdougherty/otl-compare-school-districts" target="_blank">code on GitHub</a>, with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 map2.attributionControl.setPrefix(''); //intentionally blank to avoid redundancy
 
 // add scales to both maps
