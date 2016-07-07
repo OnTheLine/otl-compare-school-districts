@@ -71,17 +71,17 @@ ul#legend-ui li {
 }
 
 #legend-ui li ul.legend li.zerotoTen span.keycolor {
-    background-color:#eff3ff;
+    background-color:#b7d8e4;
 }
 #legend-ui li ul.legend li.tentoTwenty span.keycolor {
-    background-color:#bdd7e7;
+    background-color:#7ab6cc;
 }
 #legend-ui li ul.legend li.twentytoThirty span.keycolor {
-    background-color:#6baed6;
+    background-color:#3990a3;
 }
 #legend-ui li ul.legend li.thirtytoFourty span.keycolor {
-    background-color:#3182bd;
+    background-color:#296371;
 }
 #legend-ui li ul.legend li.fourtyPlus span.keycolor {
-    background-color:#08519c;
+    background-color:#224a58;
 }
