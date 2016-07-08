@@ -18,8 +18,3 @@ http://jackdougherty.github.io/otl-compare-school-districts/index-frame.html
 ## Credits
 - Thanks to Sara Hodges and others at http://EdBuild.org for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
 - Thanks to Dan Swick at MapBox for great advice on the geocoder input values.
-
-## To Do
-- Add Ilya's permalink code from otl-neighborhood-change
-- Add basemap layer that displays more place names; see MapBox options that appear in http://geojson.io/#map=10/42.9549/-75.6161
-- Ask MAGIC to support Google Analytics and remove my GA code from index.html
