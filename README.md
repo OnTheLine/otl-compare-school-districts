@@ -1,11 +1,13 @@
 # otl-compare-school-districts
 Compare any US school district boundaries and data, side-by-side in the same scale map, using this MapBox JS tool with zoom sync. Map data layers by EdBuild.org.
 
-## Link
-https://jackdougherty.github.io/otl-compare-school-districts/index-frame.html
+## demo
+https://ontheline.github.io/otl-compare-school-districts/index-frame.html
 
-## Embed shortcode in http://OnTheLine.trincoll.edu
-[iframe src='https://jackdougherty.github.io/otl-compare-school-districts' width="100%" height=500]
+## Embed in [On The Line book](http://OnTheLine.trincoll.edu)
+```
+<iframe src='https://ontheline.github.io/otl-compare-school-districts' width="100%" height=500></iframe>
+```
 
 ## Background
 - Expands on 2016 EdBuild US school district map http://viz.edbuild.org/maps/2016/dividing-lines-2014/
