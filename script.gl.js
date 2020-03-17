@@ -4,14 +4,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamFja2RvdWdoZXJ0eSIsImEiOiJxMi11TGlzIn0.ydUTG
 var map1 = new mapboxgl.Map({
   container: 'map1',
   center: [-72.67, 41.76], // Hartford
-  zoom: 10,
+  zoom: 9,
   style: 'mapbox://styles/mapbox/light-v10'
 });
 
 var map2 = new mapboxgl.Map({
   container: 'map2',
   center: [-80.84, 35.22], // Charlotte NC
-  zoom: 10,
+  zoom: 9,
   style: 'mapbox://styles/mapbox/light-v10',
   attributionControl: false,
 });
