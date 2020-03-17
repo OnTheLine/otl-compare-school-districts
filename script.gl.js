@@ -45,9 +45,9 @@ var choroplethLayer = {
 }
 
 var bordersLayer = {
-  id: 'S_2017lines',
-  source: "src_unisec17",
-  "source-layer": "SchoolDistricts_US_17_data-13ybxj",
+  id: 'E_2017lines',
+  source: "src_unielem17",
+  "source-layer": "SchoolDistricts_UE_17_data-0hffyk",
   type: "line",
   paint: {
       "line-color": ['case', ['boolean', ['feature-state', 'fixed'], false], 'red', 'white'],
@@ -59,9 +59,9 @@ var bordersLayer = {
 
 map1.on('load', function() {
 
-  map1.addSource('src_unisec17', {
+  map1.addSource('src_unielem17', {
     'type': 'vector',
-    'url': 'mapbox://edbuild.6lt6yxzm'
+    'url': 'mapbox://edbuild.7srzux4k'
   });
 
   // Add polygons (school districts)
@@ -76,7 +76,7 @@ map1.on('load', function() {
       document.getElementById('info1').style.borderColor = 'red'
 
       map1.setFeatureState({
-        source: 'src_unisec17',
+        source: 'src_unielem17',
         sourceLayer: 'SchoolDistricts_US_17_data-13ybxj',
         id: hoveredPolygonId1
       }, {fixed: true})
@@ -85,28 +85,28 @@ map1.on('load', function() {
       document.getElementById('info1').style.borderColor = 'white'
 
       map1.setFeatureState({
-        source: 'src_unisec17',
-        sourceLayer: 'SchoolDistricts_US_17_data-13ybxj',
+        source: 'src_unielem17',
+        sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk',
         id: hoveredPolygonId1
       }, {fixed: false})
     }
   })
 
   map1.on('mousemove', function(e) {
-    var data = map1.queryRenderedFeatures(e.point, {layers: ['S_2017'] })
+    var data = map1.queryRenderedFeatures(e.point, {layers: ['E_2017'] })
 
     if (data[0] && !map1InfoFixed) {
 
       // Hover opacity change
       if (hoveredPolygonId1) {
         map1.setFeatureState(
-          { source: "src_unisec17", sourceLayer: 'SchoolDistricts_US_17_data-13ybxj', id: hoveredPolygonId1 },
+          { source: "src_unielem17", sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk', id: hoveredPolygonId1 },
           { hover: false }
         );
       }
       hoveredPolygonId1 = data[0].id;
       map1.setFeatureState(
-        { source: "src_unisec17", sourceLayer: 'SchoolDistricts_US_17_data-13ybxj', id: hoveredPolygonId1 },
+        { source: "src_unielem17", sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk', id: hoveredPolygonId1 },
         { hover: true }
       );
 
@@ -127,9 +127,9 @@ map1.on('load', function() {
 
 map2.on('load', function() {
 
-  map2.addSource('src_unisec17', {
+  map2.addSource('src_unielem17', {
     'type': 'vector',
-    'url': 'mapbox://edbuild.6lt6yxzm'
+    'url': 'mapbox://edbuild.7srzux4k'
   });
 
   // Add polygons (school districts)
@@ -144,8 +144,8 @@ map2.on('load', function() {
       document.getElementById('info2').style.borderColor = 'red'
 
       map2.setFeatureState({
-        source: 'src_unisec17',
-        sourceLayer: 'SchoolDistricts_US_17_data-13ybxj',
+        source: 'src_unielem17',
+        sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk',
         id: hoveredPolygonId2
       }, {fixed: true})
 
@@ -153,28 +153,28 @@ map2.on('load', function() {
       document.getElementById('info2').style.borderColor = 'white'
 
       map2.setFeatureState({
-        source: 'src_unisec17',
-        sourceLayer: 'SchoolDistricts_US_17_data-13ybxj',
+        source: 'src_unielem17',
+        sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk',
         id: hoveredPolygonId2
       }, {fixed: false})
     }
   })
 
   map2.on('mousemove', function(e) {
-    var data = map2.queryRenderedFeatures(e.point, {layers: ['S_2017'] })
+    var data = map2.queryRenderedFeatures(e.point, {layers: ['E_2017'] })
 
     if (data[0] && !map2InfoFixed) {
 
       // Hover opacity change
       if (hoveredPolygonId2) {
         map2.setFeatureState(
-          { source: "src_unisec17", sourceLayer: 'SchoolDistricts_US_17_data-13ybxj', id: hoveredPolygonId2 },
+          { source: "src_unielem17", sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk', id: hoveredPolygonId2 },
           { hover: false }
         );
       }
       hoveredPolygonId2 = data[0].id;
       map2.setFeatureState(
-        { source: "src_unisec17", sourceLayer: 'SchoolDistricts_US_17_data-13ybxj', id: hoveredPolygonId2 },
+        { source: "src_unielem17", sourceLayer: 'SchoolDistricts_UE_17_data-0hffyk', id: hoveredPolygonId2 },
         { hover: true }
       );
 
