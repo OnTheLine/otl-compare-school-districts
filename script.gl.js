@@ -23,7 +23,7 @@ var map2InfoFixed = false;
 
 // EdBuild elementary school districts 2017
 var choroplethLayer = {
-    id: 'S_2017',
+    id: 'E_2017',
     source: "src_unielem17",
     "source-layer": "SchoolDistricts_UE_17_data-0hffyk",
     type: "fill",
