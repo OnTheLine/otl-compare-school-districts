@@ -28,19 +28,18 @@ section {
 }
 /* Styling for LEGEND from EdBuild.org*/
 
-
 #legendcontainer{
-  display: block;
-  border: 1px solid #3887BE;
-  height: auto;
-  padding-left: 10px;
-  padding-right: 0px;
-  font: normal 13px/18px 'Lato', sans-serif;
-  width: 140px;
-  position: absolute;
-  right: 1%;
-  bottom: 4%;
-  background: white;
+      display: block;
+      border: 1px solid #3887BE;
+      height: auto;
+      padding-left: 10px;
+      padding-right: 0px;
+      font: normal 13px/18px 'Lato', sans-serif;
+      width: 140px;
+      position: absolute;
+      right: 1%;
+      bottom: 4%;
+      background: white;
 }
 
 div#legendcontainer hr {
@@ -92,55 +91,17 @@ ul#legend-ui li {
 }
 
 #legend-ui li ul.legend li.zerotoTen span.keycolor {
-  background-color:#dff3fe;
+    background-color:#b7d8e4;
 }
 #legend-ui li ul.legend li.tentoTwenty span.keycolor {
-  background-color:#92DCF0;
+    background-color:#7ab6cc;
 }
 #legend-ui li ul.legend li.twentytoThirty span.keycolor {
-  background-color:#49B4D6;
+    background-color:#3990a3;
 }
 #legend-ui li ul.legend li.thirtytoFourty span.keycolor {
-  background-color:#2586a5;
+    background-color:#296371;
 }
 #legend-ui li ul.legend li.fourtyPlus span.keycolor {
-  background-color:#19596d;
-}
-
-#info1 {
-  position: absolute;
-  z-index: 9999;
-  top: 50px;
-  right: 52%;
-  margin-left: -220px;
-  width: 220px;
-  background-color: white;
-  padding: 10px 5px;
-  border-radius: 4px;
-  border: 2px solid white;
-  font-size: 12px;
-  font-family: sans-serif;
-}
-
-
-#info2 {
-  position: absolute;
-  z-index: 9999;
-  top: 50px;
-  right: 1%;
-  margin-left: -220px;
-  width: 220px;
-  background-color: white;
-  padding: 10px 5px;
-  border-radius: 4px;
-  border: 2px solid white;
-  font-size: 12px;
-  font-family: sans-serif;
-}
-
-
-hr {
-  height: 0;
-  border: 0;
-  border-top: 2px solid black;
+    background-color:#224a58;
 }

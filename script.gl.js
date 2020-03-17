@@ -21,10 +21,11 @@ var hoveredPolygonId2 = null;
 var map1InfoFixed = false;
 var map2InfoFixed = false;
 
+// EdBuild elementary school districts 2017
 var choroplethLayer = {
     id: 'S_2017',
-    source: "src_unisec17",
-    "source-layer": "SchoolDistricts_US_17_data-13ybxj",
+    source: "src_unielem17",
+    "source-layer": "SchoolDistricts_UE_17_data-0hffyk",
     type: "fill",
     paint: {
         "fill-color": {
@@ -93,7 +94,7 @@ map1.on('load', function() {
 
   map1.on('mousemove', function(e) {
     var data = map1.queryRenderedFeatures(e.point, {layers: ['S_2017'] })
-  
+
     if (data[0] && !map1InfoFixed) {
 
       // Hover opacity change
@@ -161,7 +162,7 @@ map2.on('load', function() {
 
   map2.on('mousemove', function(e) {
     var data = map2.queryRenderedFeatures(e.point, {layers: ['S_2017'] })
-  
+
     if (data[0] && !map2InfoFixed) {
 
       // Hover opacity change
