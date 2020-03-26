@@ -14,7 +14,7 @@ https://ontheline.github.io/otl-compare-school-districts/index-frame.html
 
 ## Requires
 - Mapbox access token (free use up to a limited number of views per month)
-- EdBuild.org public Mapbox layers. EdBuild.org has always been planned as a 5-year project. Their scheduled closing date is June 30th 2020, but they plan to keep their map tile layers active.
+- EdBuild.org public Mapbox layers. EdBuild.org has always been planned as a 5-year project. Their scheduled closing date is June 30th 2020, but they plan to keep their map tile layers active. See also https://github.com/EdBuild
 
 ```
 // EdBuild elementary school districts 2017
@@ -25,6 +25,6 @@ https://ontheline.github.io/otl-compare-school-districts/index-frame.html
 ```
 
 ## Credits
-- Thanks to Sara Hodges and others at http://EdBuild.org for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
+- Thanks to Sara Hodges and others at https://github.com/EdBuild for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
 - Thanks to Dan Swick at MapBox for great advice on the geocoder input values.
 - [ilyankou](https://github.com/ilyankou) for Mapbox GL JS code
