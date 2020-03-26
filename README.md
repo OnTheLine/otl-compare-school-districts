@@ -14,7 +14,7 @@ https://ontheline.github.io/otl-compare-school-districts/index-frame.html
 
 ## Requires
 - Mapbox access token (free use up to a limited number of views per month)
-- EdBuild.org public Mapbox layers. EdBuild.org has always been planned as a 5-year project. Their scheduled closing date is June 30th 2020, but they plan to keep their map tile layers active. See also https://github.com/EdBuild
+- http://EdBuild.org public Mapbox layers. EdBuild.org has always been planned as a 5-year project. Their scheduled closing date is June 30th 2020, but they plan to keep their map tile layers active. See also https://github.com/EdBuild
 
 ```
 // EdBuild elementary school districts 2017
