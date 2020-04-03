@@ -25,6 +25,6 @@ https://ontheline.github.io/otl-compare-school-districts/index-frame.html
 ```
 
 ## Credits
+- Mapbox GL JS code developed by [ilyankou](https://github.com/ilyankou) with Jack Dougherty.
 - Thanks to Sara Hodges and others at https://github.com/EdBuild for creating the US school districts map and poverty data layers, making them publicly available on MapBox, and encouraging collaboration.
 - Thanks to Dan Swick at MapBox for great advice on the geocoder input values.
-- [ilyankou](https://github.com/ilyankou) for Mapbox GL JS code
