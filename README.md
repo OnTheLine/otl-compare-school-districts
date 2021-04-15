@@ -2,7 +2,7 @@
 Compare any US elementary school district boundaries and data, side-by-side in the same scale map, using this Mapbox GL JS tool with zoom sync. Map data layers by EdBuild.org.
 
 ## Demo
-https://ontheline.github.io/otl-compare-school-districts/index-frame.html
+https://ontheline.github.io/otl-compare-school-districts/index.html
 
 ## Embedded in [On The Line book](http://OnTheLine.trincoll.edu)
 
